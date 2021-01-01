@@ -1,26 +1,29 @@
-# AoE3DE Mod CustomPop
+# AoE3DE Mod CustomPop Chaos
 Mod for Age of Empires III: DE CustomPOP Chaos
+
 Why? Because 200 POP is boring AF and wtf cannon take much POP space
 
-===
-VERSION: 
-==================================================
+
+# FOR VERSION: 11148
 Main Feature:
 - 0 Pop Militiary (Inc: Merc and Consultate Army),
 - Vanilla POP economy units (So 200 pop is for pure economical units),
 - 999 outpost limit (also for castle and Warhut)
 - 200 limit settler & Fishboat (100 SWagon, 69 for CreeC, 180 FrenchC, 220 ChinaVil)
 
-various Increase:
-- 99 limit for pets, envoy equivalent
+Various Increase:
+- 99 limit for pets, envoy equivalent (69 Chasqui)
 - 99 limit for all war ship
 - 10 limit for Dutch bank
 - 99 Limit Native Militiary
 - 999 teepee
 - 8 gatherLimit whale
 - 199 canoe (99 catamaran)
-
-
+- 5 buildLimit Starting TC (Gonna build more TC at age1 DM)
+- 10 limit Church equivalent, capitol,
+- 10 limit special Unit: Mansabar, NatClubmanLoyal (No, Daimyo is already OP)
+- 99 Limit sallon, natEmbasy, Consulate
+- 69 Limit Forts & IncaStrongHold
 
 Known Issue:
 - Dutch Settler has 50 limit
