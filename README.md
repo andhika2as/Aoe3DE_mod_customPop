@@ -1,8 +1,7 @@
 # AoE3DE Mod CustomPop Chaos
-Mod for Age of Empires III: DE CustomPOP Chaos
+Age of Empires III: DE CustomPOP Chaos Mod
 
 Why? Because 200 POP is boring AF and wtf cannon take much POP space
-
 
 # FOR VERSION: 11148
 Main Feature:
@@ -29,7 +28,7 @@ Techtree MOD:
 - Dutch Settler set to 150 limit
 
 Known Issue:
-- Russia & China has problem with Blockhouse / Barracks Unit Creations.
+- Russia has problem with Blockhouse Unit Creations.
 - Pop reduction tech / card will ADD 1 pop. (don't use them)
 - revolution thing (not fully tested)
 
