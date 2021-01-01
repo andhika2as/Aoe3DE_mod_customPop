@@ -778,7 +778,7 @@
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
         <target type="ProtoUnit">Hussar</target>
       </effect>
-      <effect type="Data" amount="50.00" subtype="BuildLimit" relativity="Assign">
+      <effect type="Data" amount="150.00" subtype="BuildLimit" relativity="Assign">
         <target type="ProtoUnit">Settler</target>
       </effect>
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">

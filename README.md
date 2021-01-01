@@ -14,7 +14,7 @@ Main Feature:
 Various Increase:
 - 99 limit for pets, envoy equivalent (69 Chasqui)
 - 99 limit for all war ship
-- 10 limit for Dutch bank
+- 10 limit for Dutch bank (OP ?)
 - 99 Limit Native Militiary
 - 999 teepee
 - 8 gatherLimit whale
@@ -25,12 +25,16 @@ Various Increase:
 - 99 Limit sallon, natEmbasy, Consulate
 - 69 Limit Forts & IncaStrongHold
 
+Techtree MOD:
+- Dutch Settler set to 150 limit
+
 Known Issue:
-- Dutch Settler has 50 limit
 - Russia & China has problem with Blockhouse / Barracks Unit Creations.
 - Pop reduction tech / card will ADD 1 pop. (don't use them)
+- revolution thing (not fully tested)
 
-File Modified:
+File MOD:
 - Data/protoy.xml
+- Data/techtreey.xml
 
 
