@@ -4704,7 +4704,7 @@ minInterval 15
 			gMaxPop = 100 + (75 * (difficulty - intDifficulty));     // Interpolate between integers
          if (gMaxPop > cvPopLimit*2)
             gMaxPop = cvPopLimit*2;
-         aiSetEconomyPop(20);
+         aiSetEconomyPop(40);
          if ( (aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0) )
             aiSetEconomyPop(cvMaxCivPop);
          maxMil = gMaxPop - aiGetEconomyPop();
@@ -4716,10 +4716,10 @@ minInterval 15
 			gMaxPop = 175 + (125 * (difficulty - intDifficulty));      // 70 at easy up to 120 at moderate
          if (gMaxPop > cvPopLimit*2)
             gMaxPop = cvPopLimit*2;
-         aiSetEconomyPop(35);
+         aiSetEconomyPop(70);
          if ( (aiGetGameType() == cGameTypeCampaign) || (aiGetGameType() == cGameTypeScenario) )
          {
-            aiSetEconomyPop(25);
+            aiSetEconomyPop(50);
             gMaxPop = 125;
          }
          if ( (aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0) )
@@ -4733,10 +4733,10 @@ minInterval 15
 			gMaxPop = 300 + (200 * (difficulty - intDifficulty));      // 120 at moderate up to 200 at hard
          if (gMaxPop > cvPopLimit*2)
             gMaxPop = cvPopLimit*2;
-         aiSetEconomyPop(60);
+         aiSetEconomyPop(120);
          if ( (aiGetGameType() == cGameTypeCampaign) || (aiGetGameType() == cGameTypeScenario) )
          {
-            aiSetEconomyPop(45);
+            aiSetEconomyPop(90);
             gMaxPop = 225;
          }
          if ( (aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0) )
@@ -4750,10 +4750,10 @@ minInterval 15
          gMaxPop = 200;
          if (gMaxPop > cvPopLimit*2)
             gMaxPop = cvPopLimit*2;
-         aiSetEconomyPop(80 - (10 * (difficulty -  intDifficulty)));    // 80 at hard, down to 70 at hardest
+         aiSetEconomyPop(160 - (20 * (difficulty -  intDifficulty)));    // 80 at hard, down to 70 at hardest
          if ( (aiGetGameType() == cGameTypeCampaign) || (aiGetGameType() == cGameTypeScenario) )
          {
-            aiSetEconomyPop(60);
+            aiSetEconomyPop(120);
             gMaxPop = 375;
          }
          if ( (aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0) )
@@ -4767,7 +4767,7 @@ minInterval 15
          gMaxPop = 500;
          if (gMaxPop > cvPopLimit*2)
             gMaxPop = cvPopLimit*2;
-         aiSetEconomyPop(70);
+         aiSetEconomyPop(140);
          if ( (aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0) )
             aiSetEconomyPop(cvMaxCivPop);
          maxMil = gMaxPop - aiGetEconomyPop();

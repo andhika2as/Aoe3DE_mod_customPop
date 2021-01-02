@@ -8947,7 +8947,7 @@ minInterval 15
 {
 	float difficulty = aiGetWorldDifficulty();
 	int intDifficulty = difficulty;
-	int cvPopLimit = kbGetMaxPop();      // Used to calculate implied total pop limit based on civ, army and navy components.
+	int cvPopLimit = kbGetMaxPop()*2;      // Used to calculate implied total pop limit based on civ, army and navy components.
    int maxVilPop = kbGetBuildLimit(cMyID, gEconUnit);
    
    if (maxVilPop < 0)
@@ -8968,7 +8968,7 @@ minInterval 15
 		gAttackMissionInterval = 180000;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{
-			aiSetEconomyPop(20);
+			aiSetEconomyPop(40);
          if (aiGetEconomyPop() > maxVilPop)
             aiSetEconomyPop(maxVilPop);
 			if ((aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0))
@@ -8992,9 +8992,9 @@ minInterval 15
 			gMaxPop = 138;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{
-			aiSetEconomyPop(35);
+			aiSetEconomyPop(70);
 			if (gSPC == true)
-				aiSetEconomyPop(25);
+				aiSetEconomyPop(50);
          if (aiGetEconomyPop() > maxVilPop)
             aiSetEconomyPop(maxVilPop);            
 			if ((aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0))
@@ -9018,9 +9018,9 @@ minInterval 15
 			gMaxPop = 263;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{
-			aiSetEconomyPop(60);
+			aiSetEconomyPop(120);
 			if (gSPC == true)
-				aiSetEconomyPop(45);
+				aiSetEconomyPop(90);
          if (aiGetEconomyPop() > maxVilPop)
             aiSetEconomyPop(maxVilPop);            
 			if ((aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0))
@@ -9048,9 +9048,9 @@ minInterval 15
 			gAttackMissionInterval = 150000;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{
-			aiSetEconomyPop(90);
+			aiSetEconomyPop(180);
 			if (gSPC == true)
-				aiSetEconomyPop(65);
+				aiSetEconomyPop(130);
          if (aiGetEconomyPop() > maxVilPop)
             aiSetEconomyPop(maxVilPop);            
 			if ((aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0))
@@ -9072,7 +9072,7 @@ minInterval 15
 		gAttackMissionInterval = 120000;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{
-			aiSetEconomyPop(90);
+			aiSetEconomyPop(180);
          if (aiGetEconomyPop() > maxVilPop)
             aiSetEconomyPop(maxVilPop);         
 			if ((aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0))
@@ -9095,7 +9095,7 @@ minInterval 15
 		gAttackMissionInterval = 120000;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{
-			aiSetEconomyPop(90);
+			aiSetEconomyPop(180);
          if (aiGetEconomyPop() > maxVilPop)
             aiSetEconomyPop(maxVilPop);         
 			if ((aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0))
