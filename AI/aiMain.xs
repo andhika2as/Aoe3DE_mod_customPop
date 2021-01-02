@@ -9,7 +9,7 @@ extern const float   baselineHandicap = 1.0;    // This is the handicap given to
 												// meaning that hard has no handicap advantage or penalty.
 												// All other difficulty levels will be adjusted relative to this constant.  This means that
 												// we can gradually reduce this number as the AI's competence increases, and all the difficulty levels will respond.
-extern int           gMaxPop = 200;             // Absolute hard limit pop cap for game...will be set lower on some difficulty levels 
+extern int           gMaxPop = 500;             // Absolute hard limit pop cap for game...will be set lower on some difficulty levels 
 extern const int     cMaxSettlersPerPlantation = 10;
 
 // Start mode constants.
@@ -8962,9 +8962,9 @@ minInterval 15
 	{
 	case cDifficultySandbox: // Sandbox
 	{  // Typically 20 econ, 20 mil
-		gMaxPop = 40 + (30 * (difficulty - intDifficulty));     // Interpolate between integers
-		if (gMaxPop > cvPopLimit)
-			gMaxPop = cvPopLimit;
+		gMaxPop = 100 + (75 * (difficulty - intDifficulty));     // Interpolate between integers
+		if (gMaxPop > cvPopLimit*2)
+			gMaxPop = cvPopLimit*2;
 		gAttackMissionInterval = 180000;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{
@@ -8984,12 +8984,12 @@ minInterval 15
 	}
 	case cDifficultyEasy: // Easiest
 	{  // Typically 35 econ, 35 mil.
-		gMaxPop = 70 + (50 * (difficulty - intDifficulty));      // 70 at easy up to 120 at moderate
-		if (gMaxPop > cvPopLimit)
-			gMaxPop = cvPopLimit;
+		gMaxPop = 175 + (125 * (difficulty - intDifficulty));      // 70 at easy up to 120 at moderate
+		if (gMaxPop > cvPopLimit*2)
+			gMaxPop = cvPopLimit*2;
 		gAttackMissionInterval = 180000;
 		if (gSPC == true)
-			gMaxPop = 55;
+			gMaxPop = 138;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{
 			aiSetEconomyPop(35);
@@ -9010,12 +9010,12 @@ minInterval 15
 	}
 	case cDifficultyModerate: // Moderate
 	{  // Typically 60 econ, 60 mil
-		gMaxPop = 120 + (80 * (difficulty - intDifficulty));      // 120 at moderate up to 200 at hard
-		if (gMaxPop > cvPopLimit)
-			gMaxPop = cvPopLimit;
+		gMaxPop = 300 + (200 * (difficulty - intDifficulty));      // 120 at moderate up to 200 at hard
+		if (gMaxPop > cvPopLimit*2)
+			gMaxPop = cvPopLimit*2;
 		gAttackMissionInterval = 180000;
 		if (gSPC == true)
-			gMaxPop = 105;
+			gMaxPop = 263;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{
 			aiSetEconomyPop(60);
@@ -9036,13 +9036,13 @@ minInterval 15
 	}
 	case cDifficultyHard: // Hard
 	{  // Typically 90 econ, 110 mil.
-		gMaxPop = kbGetMaxPop();
-		if (gMaxPop > cvPopLimit)
-			gMaxPop = cvPopLimit;
+		gMaxPop = kbGetMaxPop()*2;
+		if (gMaxPop > cvPopLimit*2)
+			gMaxPop = cvPopLimit*2;
 		if (gSPC == true)
 		{
 			gAttackMissionInterval = 180000;
-			gMaxPop = 185;
+			gMaxPop = 463;
 		}
 		else
 			gAttackMissionInterval = 150000;
@@ -9066,9 +9066,9 @@ minInterval 15
 	}
 	case cDifficultyExpert: // Expert
 	{  // Typically 90 econ, 110 mil.
-		gMaxPop = kbGetMaxPop();
-		if (gMaxPop > cvPopLimit)
-			gMaxPop = cvPopLimit;
+		gMaxPop = kbGetMaxPop()*2;
+		if (gMaxPop > cvPopLimit*2)
+			gMaxPop = cvPopLimit*2;
 		gAttackMissionInterval = 120000;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{
@@ -9089,9 +9089,9 @@ minInterval 15
 
 	case cDifficultyExtreme: // Extreme
 	{  // Typically 90 econ, 110 mil. 
-		gMaxPop = kbGetMaxPop();
-		if (gMaxPop > cvPopLimit)
-			gMaxPop = cvPopLimit;
+		gMaxPop = kbGetMaxPop()*2;
+		if (gMaxPop > cvPopLimit*2)
+			gMaxPop = cvPopLimit*2;
 		gAttackMissionInterval = 120000;
 		if ((gRevolutionType & (cRevolutionMilitary | cRevolutionFinland)) == 0)
 		{

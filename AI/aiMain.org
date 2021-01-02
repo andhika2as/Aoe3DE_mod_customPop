@@ -61,7 +61,7 @@ extern const float   baselineHandicap = 1.0;    // This is the handicap given to
                                                 // meaning that hard has no handicap advantage or penalty.
                                                 // All other difficulty levels will be adjusted relative to this constant.  This means that
                                                 // we can gradually reduce this number as the AI's competence increases, and all the difficulty levels will respond.
-extern int           gMaxPop = 200;             // Absolute hard limit pop cap for game...will be set lower on some difficulty levels 
+extern int           gMaxPop = 500;             // Absolute hard limit pop cap for game...will be set lower on some difficulty levels 
 
 // Start mode constants.
 extern const int     cStartModeScenarioNoTC = 0;   // Scenario, wait for aiStart unit, then play without a TC
@@ -4701,9 +4701,9 @@ minInterval 15
    {
 		case cDifficultySandbox: // Sandbox
 		{  // Typically 20 econ, 20 mil
-			gMaxPop = 40 + (30 * (difficulty - intDifficulty));     // Interpolate between integers
-         if (gMaxPop > cvPopLimit)
-            gMaxPop = cvPopLimit;
+			gMaxPop = 100 + (75 * (difficulty - intDifficulty));     // Interpolate between integers
+         if (gMaxPop > cvPopLimit*2)
+            gMaxPop = cvPopLimit*2;
          aiSetEconomyPop(20);
          if ( (aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0) )
             aiSetEconomyPop(cvMaxCivPop);
@@ -4713,14 +4713,14 @@ minInterval 15
 		}
 		case cDifficultyEasy: // Easiest
 		{  // Typically 35 econ, 35 mil.
-			gMaxPop = 70 + (50 * (difficulty - intDifficulty));      // 70 at easy up to 120 at moderate
-         if (gMaxPop > cvPopLimit)
-            gMaxPop = cvPopLimit;
+			gMaxPop = 175 + (125 * (difficulty - intDifficulty));      // 70 at easy up to 120 at moderate
+         if (gMaxPop > cvPopLimit*2)
+            gMaxPop = cvPopLimit*2;
          aiSetEconomyPop(35);
          if ( (aiGetGameType() == cGameTypeCampaign) || (aiGetGameType() == cGameTypeScenario) )
          {
             aiSetEconomyPop(25);
-            gMaxPop = 50;
+            gMaxPop = 125;
          }
          if ( (aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0) )
             aiSetEconomyPop(cvMaxCivPop);
@@ -4730,14 +4730,14 @@ minInterval 15
 		}
 		case cDifficultyModerate: // Moderate
 		{  // Typically 60 econ, 60 mil
-			gMaxPop = 120 + (80 * (difficulty - intDifficulty));      // 120 at moderate up to 200 at hard
-         if (gMaxPop > cvPopLimit)
-            gMaxPop = cvPopLimit;
+			gMaxPop = 300 + (200 * (difficulty - intDifficulty));      // 120 at moderate up to 200 at hard
+         if (gMaxPop > cvPopLimit*2)
+            gMaxPop = cvPopLimit*2;
          aiSetEconomyPop(60);
          if ( (aiGetGameType() == cGameTypeCampaign) || (aiGetGameType() == cGameTypeScenario) )
          {
             aiSetEconomyPop(45);
-            gMaxPop = 90;
+            gMaxPop = 225;
          }
          if ( (aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0) )
             aiSetEconomyPop(cvMaxCivPop);
@@ -4748,13 +4748,13 @@ minInterval 15
 		case cDifficultyHard: // Hard
 		{  // Typically 80 econ, 120 mil.
          gMaxPop = 200;
-         if (gMaxPop > cvPopLimit)
-            gMaxPop = cvPopLimit;
+         if (gMaxPop > cvPopLimit*2)
+            gMaxPop = cvPopLimit*2;
          aiSetEconomyPop(80 - (10 * (difficulty -  intDifficulty)));    // 80 at hard, down to 70 at hardest
          if ( (aiGetGameType() == cGameTypeCampaign) || (aiGetGameType() == cGameTypeScenario) )
          {
             aiSetEconomyPop(60);
-            gMaxPop = 150;
+            gMaxPop = 375;
          }
          if ( (aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0) )
             aiSetEconomyPop(cvMaxCivPop);
@@ -4764,9 +4764,9 @@ minInterval 15
 		}
 		case cDifficultyExpert: // Expert
 		{  // Typically 70 econ, 130 mil.
-         gMaxPop = 200;
-         if (gMaxPop > cvPopLimit)
-            gMaxPop = cvPopLimit;
+         gMaxPop = 500;
+         if (gMaxPop > cvPopLimit*2)
+            gMaxPop = cvPopLimit*2;
          aiSetEconomyPop(70);
          if ( (aiGetEconomyPop() > cvMaxCivPop) && (cvMaxCivPop >= 0) )
             aiSetEconomyPop(cvMaxCivPop);
