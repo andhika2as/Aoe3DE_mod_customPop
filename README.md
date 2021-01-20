@@ -3,7 +3,7 @@ Age of Empires III: DE CustomPOP Chaos Mod
 
 Why? Because 200 POP is boring AF and wtf cannon take much POP space
 
-# FOR VERSION: 11148
+# FOR VERSION: 13088
 Main Feature:
 - 0 Pop Militiary (Inc: Merc and Consultate Army),
 - Vanilla POP economy units (So 200 pop is for pure economical units),
@@ -30,7 +30,6 @@ Techtree MOD:
 Known Issue:
 - Russia has problem with Blockhouse Unit Creations.
 - Pop reduction tech / card will ADD 1 pop. (don't use them)
-- revolution thing (not fully tested)
 
 File MOD:
 - Data/protoy.xml

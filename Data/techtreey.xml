@@ -8082,6 +8082,9 @@
       <effect type="TechStatus" status="obtainable">ypMonkMakeDisciple</effect>
       <effect type="TechStatus" status="active">ypAssemble</effect>
       <effect type="TechStatus" status="active">ypMuster</effect>
+      <effect type="Data" amount="0.00" subtype="BuildLimit" relativity="Assign">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
     </effects>
   </tech>
   <tech name="YPAge0ChineseTechs" type="Normal">
@@ -13273,6 +13276,18 @@
         </target>
       </effect>
       <effect type="TechStatus" status="active">deEnableBalloonPower</effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="2.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofFood" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofWood" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofCoin" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
     </effects>
   </tech>
   <tech name="Blunderbuss" type="Normal">
@@ -14574,9 +14589,6 @@
       </effect>
       <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
         <target type="ProtoUnit">AbstractPet</target>
-      </effect>
-      <effect type="Data" amount="0.90" subtype="DamageBonus" unittype="AbstractVillager" allactions="1" relativity="Absolute">
-        <target type="ProtoUnit">NativeScout</target>
       </effect>
     </effects>
   </tech>
@@ -18093,6 +18105,18 @@
         </target>
       </effect>
       <effect type="TextOutput">41860</effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="2.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofFood" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofWood" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofCoin" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
     </effects>
   </tech>
   <tech name="NatLoyalClubman" type="Normal">
@@ -27915,6 +27939,18 @@
         <target type="Player">
         </target>
       </effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="2.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofFood" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofWood" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofCoin" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
     </effects>
   </tech>
   <tech name="HCShipCuirassiers4" type="Normal">
@@ -28521,18 +28557,20 @@
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\images\icons\techs\hc_team_defenses_bastion\hc_team_defenses.png</icon>
-    <rollovertextid>37291</rollovertextid>
     <flag>HomeCity</flag>
     <flag>TeamTech</flag>
     <effects>
-      <effect type="Data" amount="2.00" subtype="FreeHomeCityUnit" unittype="OutpostWagon" relativity="Absolute">
+      <effect type="CommandAdd" proto="Outpost" page="6" column="3">
+        <target type="ProtoUnit">deMilitaryWagon</target>
+      </effect>
+      <effect type="Data" amount="2.00" subtype="FreeHomeCityUnit" unittype="deMilitaryWagon" relativity="Absolute">
         <target type="Player">
         </target>
       </effect>
-      <effect type="TextOutput">41945</effect>
-      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-        <target type="ProtoUnit">Outpost</target>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Outpost" relativity="Absolute">
+        <target type="ProtoUnit">deMilitaryWagon</target>
       </effect>
+      <effect type="TextOutput">41945</effect>
     </effects>
   </tech>
   <tech name="HCShipGalleys3" type="Normal">
@@ -34389,13 +34427,13 @@
     <rollovertextid>44274</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
-      <effect type="Data" amount="6.00" subtype="BuildLimit" relativity="Absolute">
+      <effect type="Data" amount="2.00" subtype="BuildLimit" relativity="BasePercent">
+        <target type="ProtoUnit">WarHut</target>
+      </effect>
+      <effect type="Data" amount="2.00" subtype="BuildLimit" relativity="BasePercent">
         <target type="ProtoUnit">NoblesHut</target>
       </effect>
       <effect type="TextOutput">44276</effect>
-      <effect type="Data" amount="6.00" subtype="BuildLimit" relativity="Absolute">
-        <target type="ProtoUnit">WarHut</target>
-      </effect>
     </effects>
   </tech>
   <tech name="StrongNoblesHut" type="Normal">
@@ -44112,6 +44150,9 @@
       <effect type="Data" amount="10.00" subtype="DamageBonus" unittype="Mercenary" allactions="1" relativity="Assign">
         <target type="ProtoUnit">NativeScout</target>
       </effect>
+      <effect type="Data" amount="1.00" subtype="DamageBonus" unittype="AbstractVillager" allactions="1" relativity="Assign">
+        <target type="ProtoUnit">NativeScout</target>
+      </effect>
     </effects>
   </tech>
   <tech name="HCXPRuthlessness" type="Normal">
@@ -49147,7 +49188,16 @@
     <flag>HomeCity</flag>
     <effects>
       <effect type="Data" amount="-1.00" subtype="PopulationCount" relativity="Absolute">
-        <target type="ProtoUnit">AbstractElephant</target>
+        <target type="ProtoUnit">AbstractMahout</target>
+      </effect>
+      <effect type="Data" amount="-1.00" subtype="PopulationCount" relativity="Absolute">
+        <target type="ProtoUnit">AbstractHowdah</target>
+      </effect>
+      <effect type="Data" amount="-2.00" subtype="PopulationCount" relativity="Absolute">
+        <target type="ProtoUnit">AbstractSiegeElephant</target>
+      </effect>
+      <effect type="Data" amount="-1.00" subtype="PopulationCount" relativity="Absolute">
+        <target type="ProtoUnit">AbstractMercFlailiphant</target>
       </effect>
       <effect type="TextOutput">69861</effect>
       <effect tech="ypFreeIndianSepoy" type="Data" amount="2.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="ypSepoy" relativity="Absolute">
@@ -50506,16 +50556,25 @@
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\images\icons\techs\hc_extensive_fortifications\hc_extensive_fortifications.png</icon>
-    <rollovertextid>62392</rollovertextid>
+    <rollovertextid>91854</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
-      <effect type="Data" amount="4.00" subtype="BuildLimit" relativity="Absolute">
+      <effect type="Data" amount="2.00" subtype="BuildLimit" relativity="BasePercent">
         <target type="ProtoUnit">ypCastle</target>
       </effect>
-      <effect type="TextOutput">62394</effect>
-      <effect type="Data" amount="1.25" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">ypCastle</target>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractOutpost</target>
       </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractWall</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="BuildLimit" relativity="Absolute">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="TextOutput">41838</effect>
     </effects>
   </tech>
   <tech name="YPHCWoodcraftingAsia" type="Normal">
@@ -53359,6 +53418,7 @@
     <rollovertextid>63969</rollovertextid>
     <flag>YPAlwaysDisableButtonInGrid</flag>
     <flag>Shadow</flag>
+    <flag>FakeAgeUpgrade</flag>
   </tech>
   <tech name="ypMarketHuntingDogs" type="Normal">
     <dbid>4477</dbid>
@@ -53484,6 +53544,7 @@
     <rollovertextid>63997</rollovertextid>
     <flag>Shadow</flag>
     <flag>YPAlwaysDisableButtonInGrid</flag>
+    <flag>FakeAgeUpgrade</flag>
     <prereqs>
       <techstatus status="Active">ypFakeColonialAge</techstatus>
     </prereqs>
@@ -54026,7 +54087,7 @@
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
         <target type="ProtoUnit">Blockhouse</target>
       </effect>
-      <effect type="Data" amount="1.00" subtype="BuildLimit" relativity="Assign">
+      <effect type="Data" amount="1.00" subtype="BuildLimit" relativity="Absolute">
         <target type="ProtoUnit">Blockhouse</target>
       </effect>
     </effects>
@@ -54339,6 +54400,7 @@
     <rollovertextid>64398</rollovertextid>
     <flag>Shadow</flag>
     <flag>YPAlwaysDisableButtonInGrid</flag>
+    <flag>FakeAgeUpgrade</flag>
     <prereqs>
       <techstatus status="Active">ypFakeFortressAge</techstatus>
     </prereqs>
@@ -54355,6 +54417,7 @@
     <flag>YPAlwaysDisableButtonInGrid</flag>
     <flag>Shadow</flag>
     <flag>YPNoTextMessage</flag>
+    <flag>FakeAgeUpgrade</flag>
     <prereqs>
       <techstatus status="Active">ypFakeIndustrialAge</techstatus>
     </prereqs>
@@ -59477,21 +59540,27 @@
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\images\icons\techs\hc_extensive_fortifications\hc_extensive_fortifications.png</icon>
-    <rollovertextid>66391</rollovertextid>
+    <rollovertextid>91854</rollovertextid>
     <flag>HomeCity</flag>
     <flag>YPIgnorePopCostBuildLimitFreeHCUnitIfTechObtainable</flag>
     <flag>DEForceLegacyIgnoreBehavior</flag>
     <effects>
       <effect type="TextOutput">66393</effect>
-      <effect type="Data" amount="1.25" subtype="Hitpoints" relativity="BasePercent">
+      <effect type="Data" amount="2.00" subtype="BuildLimit" relativity="BasePercent">
         <target type="ProtoUnit">ypCastle</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractOutpost</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractWall</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractAgraFort</target>
       </effect>
       <effect tech="ypFreeIndianVillager" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="ypSettlerIndian" relativity="Absolute">
         <target type="Player">
         </target>
-      </effect>
-      <effect type="Data" amount="4.00" subtype="BuildLimit" relativity="Absolute">
-        <target type="ProtoUnit">ypCastle</target>
       </effect>
       <effect tech="ypFreeIndianSepoy" type="Data" amount="2.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="ypSepoy" relativity="Absolute">
         <target type="Player">
@@ -64620,33 +64689,18 @@
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\images\icons\techs\hc_extensive_fortifications\hc_extensive_fortifications.png</icon>
-    <rollovertextid>70224</rollovertextid>
+    <rollovertextid>91854</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
       <effect type="TextOutput">70226</effect>
-      <effect type="Data" amount="6.00" subtype="BuildLimit" relativity="Absolute">
-        <target type="ProtoUnit">WarHut</target>
-      </effect>
-      <effect type="Data" amount="1.25" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">Blockhouse</target>
-      </effect>
-      <effect type="Data" amount="1.25" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">Outpost</target>
-      </effect>
-      <effect type="Data" amount="4.00" subtype="BuildLimit" relativity="Absolute">
+      <effect type="Data" amount="2.00" subtype="BuildLimit" relativity="BasePercent">
         <target type="ProtoUnit">ypCastle</target>
       </effect>
-      <effect type="Data" amount="1.25" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">ypCastle</target>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractOutpost</target>
       </effect>
-      <effect type="Data" amount="1.25" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">WarHut</target>
-      </effect>
-      <effect type="Data" amount="6.00" subtype="BuildLimit" relativity="Absolute">
-        <target type="ProtoUnit">Blockhouse</target>
-      </effect>
-      <effect type="Data" amount="6.00" subtype="BuildLimit" relativity="Absolute">
-        <target type="ProtoUnit">Outpost</target>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractWall</target>
       </effect>
     </effects>
   </tech>
@@ -66380,12 +66434,6 @@
       <effect type="Data" amount="50.00" subtype="Cost" resource="Wood" relativity="Absolute">
         <target type="ProtoUnit">TradingPost</target>
       </effect>
-      <effect type="Data" action="Discover" amount="1.00" subtype="ActionEnable" relativity="Absolute">
-        <target type="ProtoUnit">deChasqui</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.00" subtype="ActionEnable" relativity="Absolute">
-        <target type="ProtoUnit">deChasqui</target>
-      </effect>
     </effects>
   </tech>
   <tech name="DEIncaTamboShadowAsian" type="Normal">
@@ -66946,14 +66994,14 @@
   </tech>
   <tech name="DEHCShipBolasWarriors1" type="Normal">
     <dbid>6054</dbid>
-    <displaynameid>80307</displaynameid>
+    <displaynameid>80030</displaynameid>
     <cost resourcetype="Ships">1.0000</cost>
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\art\units\natives\inca\bolas_warrior_icon.png</icon>
     <flag>HomeCity</flag>
     <effects>
-      <effect type="Data" amount="7.00" subtype="FreeHomeCityUnit" unittype="deBolasWarrior" relativity="Absolute">
+      <effect type="Data" amount="8.00" subtype="FreeHomeCityUnit" unittype="deBolasWarrior" relativity="Absolute">
         <target type="Player">
         </target>
       </effect>
@@ -66968,7 +67016,7 @@
     <icon>resources\art\units\natives\inca\bolas_warrior_icon.png</icon>
     <flag>HomeCity</flag>
     <effects>
-      <effect type="Data" amount="13.00" subtype="FreeHomeCityUnit" unittype="deBolasWarrior" relativity="Absolute">
+      <effect type="Data" amount="16.00" subtype="FreeHomeCityUnit" unittype="deBolasWarrior" relativity="Absolute">
         <target type="Player">
         </target>
       </effect>
@@ -66976,14 +67024,14 @@
   </tech>
   <tech name="DEHCShipBolasWarriorsRepeat" type="Normal">
     <dbid>6056</dbid>
-    <displaynameid>80309</displaynameid>
+    <displaynameid>80307</displaynameid>
     <cost resourcetype="Ships">1.0000</cost>
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\images\icons\techs\inca\infinite_bolas_warrior.png</icon>
     <flag>HomeCity</flag>
     <effects>
-      <effect type="Data" amount="6.00" subtype="FreeHomeCityUnit" unittype="deBolasWarrior" relativity="Absolute">
+      <effect type="Data" amount="7.00" subtype="FreeHomeCityUnit" unittype="deBolasWarrior" relativity="Absolute">
         <target type="Player">
         </target>
       </effect>
@@ -68634,16 +68682,10 @@
       <effect type="Data" action="MeleeHandAttack" amount="0.50" subtype="DamageBonus" unittype="xpEagleKnight" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
-      <effect type="Data" action="MeleeHandAttack" amount="-0.5" subtype="DamageBonus" unittype="xpRifleRider" relativity="Absolute">
+      <effect type="Data" action="MeleeHandAttack" amount="-0.33" subtype="DamageBonus" unittype="xpRifleRider" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
       <effect type="Data" action="MeleeHandAttack" amount="0.6" subtype="DamageBonus" unittype="AbstractCoyoteMan" relativity="Absolute">
-        <target type="ProtoUnit">deBolasWarrior</target>
-      </effect>
-      <effect type="Data" action="MeleeHandAttack" amount="0.6" subtype="DamageBonus" unittype="ypNatRattanShield" relativity="Absolute">
-        <target type="ProtoUnit">deBolasWarrior</target>
-      </effect>
-      <effect type="Data" action="MeleeHandAttack" amount="0.6" subtype="DamageBonus" unittype="ypNatMercRattanShield" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
       <effect type="Data" action="StaggerHandAttack" amount="1.00" subtype="DamageBonus" unittype="AbstractHeavyCavalry" relativity="Absolute">
@@ -68655,16 +68697,10 @@
       <effect type="Data" action="StaggerHandAttack" amount="0.50" subtype="DamageBonus" unittype="xpEagleKnight" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
-      <effect type="Data" action="StaggerHandAttack" amount="-0.5" subtype="DamageBonus" unittype="xpRifleRider" relativity="Absolute">
+      <effect type="Data" action="StaggerHandAttack" amount="-0.33" subtype="DamageBonus" unittype="xpRifleRider" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
       <effect type="Data" action="StaggerHandAttack" amount="0.6" subtype="DamageBonus" unittype="AbstractCoyoteMan" relativity="Absolute">
-        <target type="ProtoUnit">deBolasWarrior</target>
-      </effect>
-      <effect type="Data" action="StaggerHandAttack" amount="0.6" subtype="DamageBonus" unittype="ypNatRattanShield" relativity="Absolute">
-        <target type="ProtoUnit">deBolasWarrior</target>
-      </effect>
-      <effect type="Data" action="StaggerHandAttack" amount="0.6" subtype="DamageBonus" unittype="ypNatMercRattanShield" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
       <effect type="Data" action="VolleyHandAttack" amount="1.00" subtype="DamageBonus" unittype="AbstractHeavyCavalry" relativity="Absolute">
@@ -68676,16 +68712,10 @@
       <effect type="Data" action="VolleyHandAttack" amount="0.50" subtype="DamageBonus" unittype="xpEagleKnight" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
-      <effect type="Data" action="VolleyHandAttack" amount="-0.5" subtype="DamageBonus" unittype="xpRifleRider" relativity="Absolute">
+      <effect type="Data" action="VolleyHandAttack" amount="-0.33" subtype="DamageBonus" unittype="xpRifleRider" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
       <effect type="Data" action="VolleyHandAttack" amount="0.6" subtype="DamageBonus" unittype="AbstractCoyoteMan" relativity="Absolute">
-        <target type="ProtoUnit">deBolasWarrior</target>
-      </effect>
-      <effect type="Data" action="VolleyHandAttack" amount="0.6" subtype="DamageBonus" unittype="ypNatRattanShield" relativity="Absolute">
-        <target type="ProtoUnit">deBolasWarrior</target>
-      </effect>
-      <effect type="Data" action="VolleyHandAttack" amount="0.6" subtype="DamageBonus" unittype="ypNatMercRattanShield" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
       <effect type="Data" action="DefendHandAttack" amount="1.00" subtype="DamageBonus" unittype="AbstractHeavyCavalry" relativity="Absolute">
@@ -68697,16 +68727,10 @@
       <effect type="Data" action="DefendHandAttack" amount="0.50" subtype="DamageBonus" unittype="xpEagleKnight" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
-      <effect type="Data" action="DefendHandAttack" amount="-0.5" subtype="DamageBonus" unittype="xpRifleRider" relativity="Absolute">
+      <effect type="Data" action="DefendHandAttack" amount="-0.33" subtype="DamageBonus" unittype="xpRifleRider" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
       <effect type="Data" action="DefendHandAttack" amount="0.6" subtype="DamageBonus" unittype="AbstractCoyoteMan" relativity="Absolute">
-        <target type="ProtoUnit">deBolasWarrior</target>
-      </effect>
-      <effect type="Data" action="DefendHandAttack" amount="0.6" subtype="DamageBonus" unittype="ypNatRattanShield" relativity="Absolute">
-        <target type="ProtoUnit">deBolasWarrior</target>
-      </effect>
-      <effect type="Data" action="DefendHandAttack" amount="0.6" subtype="DamageBonus" unittype="ypNatMercRattanShield" relativity="Absolute">
         <target type="ProtoUnit">deBolasWarrior</target>
       </effect>
       <effect type="TextOutput">80509</effect>
@@ -68999,10 +69023,7 @@
       <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
         <target type="ProtoUnit">deChasqui</target>
       </effect>
-      <effect type="Data" action="Stealth" amount="1.00" subtype="ActionEnable" relativity="Absolute">
-        <target type="ProtoUnit">deChasqui</target>
-      </effect>
-      <effect type="Data" amount="1.00" tactic="Stealth" subtype="TacticEnable" relativity="Absolute">
+      <effect type="Data" amount="1.00" subtype="DamageBonus" unittype="AbstractVillager" allactions="1" relativity="Assign">
         <target type="ProtoUnit">deChasqui</target>
       </effect>
       <effect type="Data" amount="3.50" subtype="DamageBonus" unittype="Mercenary" allactions="1" relativity="Absolute">
@@ -69460,6 +69481,12 @@
       </effect>
       <effect type="Data" action="Stealth" amount="1.00" subtype="ActionEnable" relativity="Absolute">
         <target type="ProtoUnit">deIncaRunner</target>
+      </effect>
+      <effect type="Data" action="Stealth" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">deChasqui</target>
+      </effect>
+      <effect type="Data" amount="1.00" tactic="Stealth" subtype="TacticEnable" relativity="Absolute">
+        <target type="ProtoUnit">deChasqui</target>
       </effect>
     </effects>
   </tech>
@@ -71638,6 +71665,8 @@
       <effect type="TechStatus" status="obtainable">deInfantryGuns</effect>
       <effect type="TechStatus" status="obtainable">deImperialInfantryGuns</effect>
       <effect type="TechStatus" status="obtainable">IncendiaryGrenades</effect>
+      <effect type="TechStatus" status="active">SaloonJaeger</effect>
+      <effect type="TechStatus" status="active">SaloonBlackRider</effect>
     </effects>
   </tech>
   <tech name="DEColonializeSwedish" type="Normal">
@@ -71838,18 +71867,6 @@
       <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" action="DefendRangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="StaggerRangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="VolleyRangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
     </effects>
   </tech>
   <tech name="GuardCaroleans" type="Normal">
@@ -71880,18 +71897,6 @@
       <effect type="Data" amount="1.30" subtype="Damage" allactions="1" relativity="BasePercent">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" action="DefendRangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="StaggerRangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="VolleyRangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
     </effects>
   </tech>
   <tech name="ImperialCaroleans" type="Normal">
@@ -71916,18 +71921,6 @@
         <target type="ProtoUnit">deCarolean</target>
       </effect>
       <effect type="Data" amount="1.50" subtype="Damage" allactions="1" relativity="BasePercent">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="DefendRangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="StaggerRangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="VolleyRangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="LOS" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
     </effects>
@@ -72683,22 +72676,37 @@
     <flag>AgeUpgrade</flag>
     <flag>CountsTowardEconomicScore</flag>
     <effects>
-      <effect type="TechStatus" status="active">VeteranPikemen</effect>
-      <effect type="CommandRemove" tech="VeteranPikemen">
-        <target type="ProtoUnit">Barracks</target>
-      </effect>
-      <effect type="TechStatus" status="active">GuardPikemen</effect>
-      <effect type="TechStatus" status="active">VeteranCrossbowmen</effect>
-      <effect type="CommandRemove" tech="VeteranCrossbowmen">
-        <target type="ProtoUnit">Barracks</target>
-      </effect>
-      <effect type="TechStatus" status="active">GuardCrossbowmen</effect>
-      <effect type="CommandRemove" tech="GuardCrossbowmen">
-        <target type="ProtoUnit">Barracks</target>
-      </effect>
-      <effect type="TechStatus" status="obtainable">ImperialPikemen</effect>
-      <effect type="TechStatus" status="obtainable">ImperialCrossbowmen</effect>
       <effect type="SetAge">Age3</effect>
+      <effect type="TechStatus" status="obtainable">GuardCrossbowmen</effect>
+      <effect type="TechStatus" status="obtainable">ImperialCrossbowmen</effect>
+      <effect type="TechStatus" status="obtainable">GuardPikemen</effect>
+      <effect type="TechStatus" status="obtainable">ImperialPikemen</effect>
+      <effect type="TechStatus" status="obtainable">DEKeepCrossbowmenTechsAlignedInBarracksShadow</effect>
+      <effect type="TechStatus" status="obtainable">DEKeepPikemenTechsAlignedInBarracksShadow</effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">GuardPikemen</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">GuardPikemen</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">GuardCrossbowmen</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">GuardCrossbowmen</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">GuardHalberdiers</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">GuardHalberdiers</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">GuardDopplesoldners</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">GuardDopplesoldners</target>
+      </effect>
     </effects>
   </tech>
   <tech name="GuardCrossbowmen" type="Normal">
@@ -72793,21 +72801,27 @@
     <researchpoints>90.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\images\icons\ingame\icon_age_iv.png</icon>
-    <rollovertextid>91551</rollovertextid>
+    <rollovertextid>91857</rollovertextid>
     <flag>Shadow</flag>
     <flag>AgeUpgrade</flag>
     <flag>CountsTowardEconomicScore</flag>
     <effects>
-      <effect type="TechStatus" status="active">VeteranPikemen</effect>
-      <effect type="TechStatus" status="active">RGTercio</effect>
-      <effect type="TechStatus" status="active">VeteranCrossbowmen</effect>
-      <effect type="CommandRemove" tech="VeteranCrossbowmen">
-        <target type="ProtoUnit">Barracks</target>
-      </effect>
-      <effect type="TechStatus" status="active">GuardCrossbowmen</effect>
-      <effect type="TechStatus" status="obtainable">ImperialTercio</effect>
-      <effect type="TechStatus" status="obtainable">ImperialCrossbowmen</effect>
       <effect type="SetAge">Age3</effect>
+      <effect type="TechStatus" status="obtainable">GuardCrossbowmen</effect>
+      <effect type="TechStatus" status="obtainable">ImperialCrossbowmen</effect>
+      <effect type="TechStatus" status="obtainable">DEKeepCrossbowmenTechsAlignedInBarracksShadow</effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">RGTercio</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">RGTercio</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">GuardCrossbowmen</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">GuardCrossbowmen</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEPoliticianPapalGuardSwedish" type="Normal">
@@ -72818,14 +72832,24 @@
     <researchpoints>90.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\images\icons\ingame\icon_age_iv.png</icon>
-    <rollovertextid>91814</rollovertextid>
+    <rollovertextid>91858</rollovertextid>
     <flag>Shadow</flag>
     <flag>AgeUpgrade</flag>
     <flag>CountsTowardEconomicScore</flag>
     <effects>
-      <effect type="TechStatus" status="active">VeteranPikemen</effect>
-      <effect type="TechStatus" status="active">RGDalkarl</effect>
       <effect type="SetAge">Age3</effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">RGDalkarl</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">RGDalkarl</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">GuardHalberdiers</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">GuardHalberdiers</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEPoliticianMercContractor" type="Normal">
@@ -73080,14 +73104,19 @@
     <flag>AgeUpgrade</flag>
     <flag>CountsTowardEconomicScore</flag>
     <effects>
-      <effect type="TechStatus" status="active">VeteranPikemen</effect>
-      <effect type="CommandRemove" tech="VeteranPikemen">
-        <target type="ProtoUnit">Barracks</target>
+      <effect type="SetAge">Age3</effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">GuardPikemen</target>
       </effect>
-      <effect type="TechStatus" status="obtainable">GuardPikemen</effect>
-      <effect type="TechStatus" status="active">VeteranLongbowmen</effect>
-      <effect type="TechStatus" status="obtainable">ImperialPikemen</effect>
-      <effect type="SetAge">Age2</effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">GuardPikemen</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">GuardLongbowmen</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">GuardLongbowmen</target>
+      </effect>
     </effects>
   </tech>
   <tech name="deMapSufiNativeVoice" type="Normal">
@@ -73635,6 +73664,15 @@
       <effect type="Data" amount="20.00" subtype="ResearchPoints" relativity="Assign">
         <target type="Tech">HCCoastalDefensesTeam</target>
       </effect>
+      <effect type="Data" amount="20.00" subtype="ResearchPoints" relativity="Assign">
+        <target type="Tech">HCShipBalloons</target>
+      </effect>
+      <effect type="Data" amount="20.00" subtype="ResearchPoints" relativity="Assign">
+        <target type="Tech">HCNativeLore</target>
+      </effect>
+      <effect type="Data" amount="20.00" subtype="ResearchPoints" relativity="Assign">
+        <target type="Tech">DEHCExtensiveFortificationsEuropean</target>
+      </effect>
       <effect type="TechStatus" status="unobtainable">deDefaultCratesShadow</effect>
       <effect type="TechStatus" status="active">deSpanishLogisticianShadow</effect>
     </effects>
@@ -73785,6 +73823,10 @@
         <target type="Player">
         </target>
       </effect>
+      <effect type="TechStatus" status="active">GuardCrossbowmen</effect>
+      <effect type="CommandRemove" tech="GuardCrossbowmen">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
     </effects>
   </tech>
   <tech name="ImperialOrdinanceBesteiro" type="Normal">
@@ -73830,20 +73872,31 @@
     <flag>AgeUpgrade</flag>
     <flag>CountsTowardEconomicScore</flag>
     <effects>
-      <effect type="TechStatus" status="active">VeteranPikemen</effect>
-      <effect type="CommandRemove" tech="VeteranPikemen">
-        <target type="ProtoUnit">Barracks</target>
-      </effect>
-      <effect type="TechStatus" status="active">GuardPikemen</effect>
-      <effect type="TechStatus" status="active">VeteranCrossbowmen</effect>
-      <effect type="CommandRemove" tech="VeteranCrossbowmen">
-        <target type="ProtoUnit">Barracks</target>
-      </effect>
-      <effect type="TechStatus" status="active">GuardCrossbowmen</effect>
-      <effect type="TechStatus" status="active">RGOrdinanceBesteiro</effect>
-      <effect type="TechStatus" status="obtainable">ImperialPikemen</effect>
-      <effect type="TechStatus" status="obtainable">ImperialOrdinanceBesteiro</effect>
       <effect type="SetAge">Age3</effect>
+      <effect type="TechStatus" status="obtainable">RGOrdinanceBesteiro</effect>
+      <effect type="TechStatus" status="obtainable">ImperialOrdinanceBesteiro</effect>
+      <effect type="TechStatus" status="obtainable">GuardPikemen</effect>
+      <effect type="TechStatus" status="obtainable">ImperialPikemen</effect>
+      <effect type="TechStatus" status="obtainable">DEKeepCrossbowmenTechsAlignedInBarracksShadow</effect>
+      <effect type="TechStatus" status="obtainable">DEKeepPikemenTechsAlignedInBarracksShadow</effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">GuardPikemen</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">GuardPikemen</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">RGOrdinanceBesteiro</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">RGOrdinanceBesteiro</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Wood" relativity="Assign">
+        <target type="Tech">GuardHalberdiers</target>
+      </effect>
+      <effect type="Data" amount="300.00" subtype="Cost" resource="Gold" relativity="Assign">
+        <target type="Tech">GuardHalberdiers</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEHCRoyalDecreeSwedish" type="Normal">
@@ -74041,40 +74094,22 @@
       <effect type="Data" action="DefendRangedAttack" amount="1.10" subtype="Damage" relativity="BasePercent">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" action="DefendRangedAttack" amount="1.00" subtype="DamageBonus" unittype="AbstractHeavyCavalry" relativity="Absolute">
+      <effect type="Data" action="DefendRangedAttack" amount="0.70" subtype="DamageBonus" unittype="AbstractHeavyCavalry" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" action="StaggerRangedAttack" amount="1.00" subtype="DamageBonus" unittype="AbstractHeavyCavalry" relativity="Absolute">
+      <effect type="Data" action="StaggerRangedAttack" amount="0.70" subtype="DamageBonus" unittype="AbstractHeavyCavalry" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" action="VolleyRangedAttack" amount="1.00" subtype="DamageBonus" unittype="AbstractHeavyCavalry" relativity="Absolute">
+      <effect type="Data" action="VolleyRangedAttack" amount="0.70" subtype="DamageBonus" unittype="AbstractHeavyCavalry" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" action="DefendRangedAttack" amount="0.60" subtype="DamageBonus" unittype="AbstractCoyoteMan" relativity="Absolute">
+      <effect type="Data" action="DefendRangedAttack" amount="0.40" subtype="DamageBonus" unittype="AbstractCoyoteMan" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" action="StaggerRangedAttack" amount="0.60" subtype="DamageBonus" unittype="AbstractCoyoteMan" relativity="Absolute">
+      <effect type="Data" action="StaggerRangedAttack" amount="0.40" subtype="DamageBonus" unittype="AbstractCoyoteMan" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" action="VolleyRangedAttack" amount="0.60" subtype="DamageBonus" unittype="AbstractCoyoteMan" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="DefendRangedAttack" amount="0.60" subtype="DamageBonus" unittype="ypNatRattanShield" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="StaggerRangedAttack" amount="0.60" subtype="DamageBonus" unittype="ypNatRattanShield" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="VolleyRangedAttack" amount="0.60" subtype="DamageBonus" unittype="ypNatRattanShield" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="DefendRangedAttack" amount="0.60" subtype="DamageBonus" unittype="ypNatMercRattanShield" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="StaggerRangedAttack" amount="0.60" subtype="DamageBonus" unittype="ypNatMercRattanShield" relativity="Absolute">
-        <target type="ProtoUnit">deCarolean</target>
-      </effect>
-      <effect type="Data" action="VolleyRangedAttack" amount="0.60" subtype="DamageBonus" unittype="ypNatMercRattanShield" relativity="Absolute">
+      <effect type="Data" action="VolleyRangedAttack" amount="0.40" subtype="DamageBonus" unittype="AbstractCoyoteMan" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
       <effect type="TextOutput">91640</effect>
@@ -74146,7 +74181,7 @@
       <effect type="Data" amount="1.25" subtype="Hitpoints" relativity="BasePercent">
         <target type="ProtoUnit">Hussar</target>
       </effect>
-      <effect type="Data" amount="1.15" subtype="Hitpoints" relativity="BasePercent">
+      <effect type="Data" amount="1.25" subtype="Hitpoints" relativity="BasePercent">
         <target type="ProtoUnit">deFinnishRider</target>
       </effect>
       <effect type="TextOutput">91646</effect>
@@ -74162,16 +74197,16 @@
     <rollovertextid>91647</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
-      <effect type="Data" action="DefendRangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+      <effect type="Data" action="DefendRangedAttack" amount="3.00" subtype="MaximumRange" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" action="StaggerRangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+      <effect type="Data" action="StaggerRangedAttack" amount="3.00" subtype="MaximumRange" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" action="VolleyRangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+      <effect type="Data" action="VolleyRangedAttack" amount="3.00" subtype="MaximumRange" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
-      <effect type="Data" amount="4.00" subtype="LOS" relativity="Absolute">
+      <effect type="Data" amount="3.00" subtype="LOS" relativity="Absolute">
         <target type="ProtoUnit">deCarolean</target>
       </effect>
       <effect type="Data" action="DefendRangedAttack" amount="1.00" subtype="MaximumRange" relativity="Absolute">
@@ -74227,6 +74262,9 @@
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
       <effect type="TextOutput">91663</effect>
+      <effect type="Data" action="Gather" amount="1.25" subtype="Yield" unittype="deFurTrade" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEHCTorpTeam" type="Normal">
@@ -74514,6 +74552,18 @@
     <rollovertextid>91700</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="6">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="6">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="4">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="4">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
       <effect type="Data" amount="10.00" subtype="FreeHomeCityUnit" unittype="MercJaeger" relativity="Absolute">
         <target type="Player">
         </target>
@@ -74522,6 +74572,24 @@
         <target type="ProtoUnit">MercJaeger</target>
       </effect>
       <effect type="TextOutput">91702</effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">MercJaeger</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEHCContractMercsBlackRiders" type="Normal">
@@ -74535,6 +74603,15 @@
     <rollovertextid>91703</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
+      <effect type="CommandAdd" proto="MercBlackRider" page="0" column="2">
+        <target type="ProtoUnit">Stable</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercBlackRider" page="0" column="8">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercBlackRider" page="0" column="7">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
       <effect type="Data" amount="7.00" subtype="FreeHomeCityUnit" unittype="MercBlackRider" relativity="Absolute">
         <target type="Player">
         </target>
@@ -74543,6 +74620,18 @@
         <target type="ProtoUnit">MercBlackRider</target>
       </effect>
       <effect type="TextOutput">91705</effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercBlackRider" relativity="Absolute">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercBlackRider" relativity="Absolute">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercBlackRider" relativity="Absolute">
+        <target type="ProtoUnit">Stable</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercBlackRider" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEHCContractMercsHighlanders" type="Normal">
@@ -74556,6 +74645,12 @@
     <rollovertextid>91706</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
+      <effect type="CommandAdd" proto="MercHighlander" page="2" column="3">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercHighlander" page="2" column="3">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
       <effect type="Data" amount="9.00" subtype="FreeHomeCityUnit" unittype="MercHighlander" relativity="Absolute">
         <target type="Player">
         </target>
@@ -74564,12 +74659,27 @@
         <target type="ProtoUnit">MercHighlander</target>
       </effect>
       <effect type="TextOutput">91708</effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercHighlander" relativity="Absolute">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercHighlander" relativity="Absolute">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercHighlander" relativity="Absolute">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercHighlander" relativity="Absolute">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercHighlander" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEHCContractMercsFusiliers" type="Normal">
     <dbid>6411</dbid>
     <displaynameid>91710</displaynameid>
-    <cost resourcetype="Gold">700.0000</cost>
+    <cost resourcetype="Gold">400.0000</cost>
     <cost resourcetype="Ships">1.0000</cost>
     <researchpoints>60.0000</researchpoints>
     <status>UNOBTAINABLE</status>
@@ -74577,7 +74687,13 @@
     <rollovertextid>91709</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
-      <effect type="Data" amount="4.00" subtype="FreeHomeCityUnit" unittype="MercFusilier" relativity="Absolute">
+      <effect type="CommandAdd" proto="MercFusilier" page="2" column="1">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercFusilier" page="2" column="1">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="Data" amount="3.00" subtype="FreeHomeCityUnit" unittype="MercFusilier" relativity="Absolute">
         <target type="Player">
         </target>
       </effect>
@@ -74588,6 +74704,21 @@
         <target type="ProtoUnit">MercFusilier</target>
       </effect>
       <effect type="TextOutput">91711</effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercFusilier" relativity="Absolute">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercFusilier" relativity="Absolute">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercFusilier" relativity="Absolute">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercFusilier" relativity="Absolute">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercFusilier" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEHCContractMercsSwissPikemen" type="Normal">
@@ -74601,6 +74732,12 @@
     <rollovertextid>91712</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
+      <effect type="CommandAdd" proto="MercSwissPikeman" page="2" column="2">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercSwissPikeman" page="2" column="2">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
       <effect type="Data" amount="12.00" subtype="FreeHomeCityUnit" unittype="MercSwissPikeman" relativity="Absolute">
         <target type="Player">
         </target>
@@ -74609,6 +74746,21 @@
         <target type="ProtoUnit">MercSwissPikeman</target>
       </effect>
       <effect type="TextOutput">91714</effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercSwissPikeman" relativity="Absolute">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercSwissPikeman" relativity="Absolute">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercSwissPikeman" relativity="Absolute">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercSwissPikeman" relativity="Absolute">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercSwissPikeman" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEHCContractMercsLandsknechts" type="Normal">
@@ -74622,6 +74774,12 @@
     <rollovertextid>91715</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
+      <effect type="CommandAdd" proto="MercLandsknecht" page="2" column="4">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercLandsknecht" page="2" column="4">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
       <effect type="Data" amount="4.00" subtype="FreeHomeCityUnit" unittype="MercLandsknecht" relativity="Absolute">
         <target type="Player">
         </target>
@@ -74633,6 +74791,21 @@
         <target type="ProtoUnit">MercLandsknecht</target>
       </effect>
       <effect type="TextOutput">91717</effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercLandsknecht" relativity="Absolute">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercLandsknecht" relativity="Absolute">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercLandsknecht" relativity="Absolute">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercLandsknecht" relativity="Absolute">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercLandsknecht" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEHCCaseShot" type="Normal">
@@ -75818,6 +75991,12 @@
       <techstatus status="Active">Industrialize</techstatus>
     </prereqs>
     <effects>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Falconet" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Culverin" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
       <effect type="InitiateRevolution" proto="deREVBarbaryWarrior">
       </effect>
       <effect type="Data" action="Discover" amount="1.00" subtype="ActionEnable" relativity="Absolute">
@@ -75892,6 +76071,8 @@
       <effect type="TechStatus" status="obtainable">Bayonet</effect>
       <effect type="SetName" proto="xpColonialMilitia" culture="none" newname="44372">
       </effect>
+      <effect type="TechStatus" status="obtainable">DERevolutionBarbaryStatesOttomanShadow</effect>
+      <effect type="TechStatus" status="obtainable">DERevolutionBarbaryStatesPortugueseShadow</effect>
     </effects>
   </tech>
   <tech name="DERevolutionCanadaBritish" type="Normal">
@@ -77704,6 +77885,12 @@
     <rollovertextid>91745</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Mercenary</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">Mercenary</target>
+      </effect>
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
         <target type="ProtoUnit">MercBlackRider</target>
       </effect>
@@ -77746,11 +77933,14 @@
       <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
         <target type="ProtoUnit">Blockhouse</target>
       </effect>
-      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
-        <target type="ProtoUnit">Mercenary</target>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
       </effect>
-      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
-        <target type="ProtoUnit">Mercenary</target>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercBlackRider" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercLandsknecht" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
       </effect>
       <effect type="TextOutput">91746</effect>
     </effects>
@@ -78645,12 +78835,7 @@
     <rollovertextid>91755</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
-      <effect type="Data" action="SpawnBush" amount="0.00" subtype="WorkRate" unittype="deTorpBush" relativity="Assign">
-        <target type="ProtoUnit">deTorp</target>
-      </effect>
-      <effect type="Data" action="SpawnBush" amount="1.00" subtype="WorkRate" unittype="deTorpBush2" relativity="Assign">
-        <target type="ProtoUnit">deTorp</target>
-      </effect>
+      <effect type="TechStatus" status="active">DEHCBlueberriesShadow</effect>
       <effect type="TextOutput">91756</effect>
     </effects>
   </tech>
@@ -79643,8 +79828,60 @@
     <flag>CountsTowardEconomicScore</flag>
     <effects>
       <effect type="SetAge">Age2</effect>
-      <effect type="TechStatus" status="active">SaloonJaeger</effect>
-      <effect type="TechStatus" status="active">SaloonBlackRider</effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">MercBlackRider</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">MercJaeger</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="6">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="6">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="4">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="4">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercBlackRider" page="0" column="2">
+        <target type="ProtoUnit">Stable</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercBlackRider" page="0" column="8">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercBlackRider" page="0" column="7">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercBlackRider" relativity="Absolute">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercBlackRider" relativity="Absolute">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercBlackRider" relativity="Absolute">
+        <target type="ProtoUnit">Stable</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercBlackRider" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEREVAztecSwashbucklerShadow" type="Normal">
@@ -81712,7 +81949,7 @@
   <tech name="DEAge2ChasquiInca" type="Normal">
     <dbid>6665</dbid>
     <researchpoints>0.0000</researchpoints>
-    <status>OBTAINABLE</status>
+    <status>UNOBTAINABLE</status>
     <flag>Shadow</flag>
     <prereqs>
       <techstatus status="Active">Colonialize</techstatus>
@@ -82177,7 +82414,7 @@
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\images\icons\techs\grenade_launcher.png</icon>
-    <rollovertextid>91785</rollovertextid>
+    <rollovertextid>91848</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
       <effect tech="ypFreeCoinCrate400" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofCoinLarge400" relativity="Absolute">
@@ -82235,6 +82472,252 @@
       <effect type="Data" amount="5.00" subtype="FreeHomeCityUnit" unittype="dePriestess" relativity="Absolute">
         <target type="Player">
         </target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="VeteranCacadoreShadow" type="Normal">
+    <dbid>6690</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">Fortressize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">Cacadore</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">Cacadore</target>
+      </effect>
+      <effect type="SetName" proto="Cacadore" culture="none" newname="70519">
+      </effect>
+    </effects>
+  </tech>
+  <tech name="DEHCExtensiveFortificationsEuropean" type="Normal">
+    <dbid>6691</dbid>
+    <displaynameid>35132</displaynameid>
+    <cost resourcetype="Ships">1.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\hc_extensive_fortifications\hc_extensive_fortifications.png</icon>
+    <rollovertextid>91851</rollovertextid>
+    <flag>HomeCity</flag>
+    <effects>
+      <effect type="Data" amount="2.00" subtype="BuildLimit" relativity="BasePercent">
+        <target type="ProtoUnit">Outpost</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractOutpost</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractWall</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="TextOutput">41838</effect>
+      <effect tech="ypFreeCoinCrate400" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofCoinLarge400" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="2.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofFood" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofWood" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect tech="deSpanishLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofCoin" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect tech="deGermanLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="Uhlan" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="DEHCExtensiveFortificationsRussian" type="Normal">
+    <dbid>6692</dbid>
+    <displaynameid>35132</displaynameid>
+    <cost resourcetype="Ships">1.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\hc_extensive_fortifications\hc_extensive_fortifications.png</icon>
+    <rollovertextid>91852</rollovertextid>
+    <flag>HomeCity</flag>
+    <effects>
+      <effect type="Data" amount="2.00" subtype="BuildLimit" relativity="BasePercent">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractOutpost</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractWall</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="TextOutput">41838</effect>
+    </effects>
+  </tech>
+  <tech name="DEHCExtensiveFortificationsWarchief" type="Normal">
+    <dbid>6693</dbid>
+    <displaynameid>35132</displaynameid>
+    <cost resourcetype="Ships">1.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\hc_extensive_fortifications\hc_extensive_fortifications.png</icon>
+    <rollovertextid>91853</rollovertextid>
+    <flag>HomeCity</flag>
+    <effects>
+      <effect type="Data" amount="2.00" subtype="BuildLimit" relativity="BasePercent">
+        <target type="ProtoUnit">WarHut</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractOutpost</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractWall</target>
+      </effect>
+      <effect type="TextOutput">41838</effect>
+    </effects>
+  </tech>
+  <tech name="DEHCExtensiveFortificationsInca" type="Normal">
+    <dbid>6694</dbid>
+    <displaynameid>35132</displaynameid>
+    <cost resourcetype="Ships">1.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\hc_extensive_fortifications\hc_extensive_fortifications.png</icon>
+    <rollovertextid>91853</rollovertextid>
+    <flag>HomeCity</flag>
+    <effects>
+      <effect type="Data" amount="2.00" subtype="BuildLimit" relativity="BasePercent">
+        <target type="ProtoUnit">WarHut</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractOutpost</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">deIncaStronghold</target>
+      </effect>
+      <effect type="Data" amount="1.25" subtype="Hitpoints" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractWall</target>
+      </effect>
+      <effect type="TextOutput">41838</effect>
+    </effects>
+  </tech>
+  <tech name="DERevolutionBarbaryStatesOttomanShadow" type="Normal">
+    <dbid>6695</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">DERevolutionBarbaryStates</techstatus>
+      <techstatus status="Active">Age0Ottoman</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Janissary" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Hussar" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="CavalryArcher" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Grenadier" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="AbusGun" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="DERevolutionBarbaryStatesPortugueseShadow" type="Normal">
+    <dbid>6696</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">DERevolutionBarbaryStates</techstatus>
+      <techstatus status="Active">Age0Portuguese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Crossbowman" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Pikeman" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Musketeer" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Cacadore" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Halberdier" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Hussar" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="Dragoon" relativity="Absolute">
+        <target type="ProtoUnit">Privateer</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="DEHCBlueberriesShadow" type="Normal">
+    <dbid>6697</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>OBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">DEHCBlueberries</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TransformUnit" toprotoid="deTorpBush2" fromprotoid="deTorpBush">
+      </effect>
+      <effect type="Data" amount="375" subtype="InventoryAmount" resource="Food" relativity="Absolute">
+        <target type="ProtoUnit">deTorpBush2</target>
+      </effect>
+      <effect type="Data" action="AreaGatherBerryBush" amount="0.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">deTorp</target>
+      </effect>
+      <effect type="Data" action="AreaGatherBerryBush2" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">deTorp</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="DEKeepCrossbowmenTechsAlignedInBarracksShadow" type="Normal">
+    <dbid>6698</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">VeteranCrossbowmen</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="CommandRemove" tech="VeteranCrossbowmen">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="DEKeepPikemenTechsAlignedInBarracksShadow" type="Normal">
+    <dbid>6699</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">VeteranPikemen</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="CommandRemove" tech="VeteranPikemen">
+        <target type="ProtoUnit">Barracks</target>
       </effect>
     </effects>
   </tech>
