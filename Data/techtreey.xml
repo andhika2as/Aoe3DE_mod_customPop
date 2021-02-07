@@ -1184,6 +1184,9 @@
       <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="AbstractBerryBush" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
       <effect type="TechStatus" status="obtainable">ChurchEconmediaManor</effect>
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
         <target type="ProtoUnit">Mill</target>
@@ -11071,6 +11074,9 @@
       <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="ypBerryBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="NatMustangs" type="Normal">
@@ -13597,6 +13603,9 @@
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
       <effect type="Data" action="Gather" amount="0.95" subtype="WorkRate" unittype="ypGroveBuilding" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="0.95" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
@@ -19160,6 +19169,12 @@
         <target type="Player">
         </target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.20" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="Yield" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="HCGrainMarket" type="Normal">
@@ -19263,45 +19278,12 @@
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
       <effect type="TextOutput">41929</effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="TownCenter" relativity="BasePercent">
-        <target type="ProtoUnit">CoveredWagon</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="Outpost" relativity="BasePercent">
-        <target type="ProtoUnit">OutpostWagon</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="FortFrontier" relativity="BasePercent">
-        <target type="ProtoUnit">FortWagon</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="Blockhouse" relativity="BasePercent">
-        <target type="ProtoUnit">OutpostWagon</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="Factory" relativity="BasePercent">
-        <target type="ProtoUnit">FactoryWagon</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="Building" relativity="BasePercent">
-        <target type="ProtoUnit">xpBuilder</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="Farm" relativity="BasePercent">
-        <target type="ProtoUnit">FarmTravois</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="WarHut" relativity="BasePercent">
-        <target type="ProtoUnit">WarHutTravois</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="Bank" relativity="BasePercent">
-        <target type="ProtoUnit">BankWagon</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="TradingPost" relativity="BasePercent">
-        <target type="ProtoUnit">TradingPostTravois</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="NoblesHut" relativity="BasePercent">
-        <target type="ProtoUnit">NoblesHutTravois</target>
-      </effect>
-      <effect type="Data" action="Build" amount="1.50" subtype="WorkRate" unittype="Dock" relativity="BasePercent">
-        <target type="ProtoUnit">YPDockWagon</target>
-      </effect>
       <effect tech="ypFreeCoinCrate400" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofCoinLarge400" relativity="Absolute">
         <target type="Player">
         </target>
+      </effect>
+      <effect type="Data" action="Build" amount="1.65" subtype="WorkRate" unittype="Building" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractWagon</target>
       </effect>
     </effects>
   </tech>
@@ -19387,6 +19369,9 @@
       <effect tech="ypFreeCoinCrate400" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofCoinLarge400" relativity="Absolute">
         <target type="Player">
         </target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.20" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
   </tech>
@@ -20019,6 +20004,12 @@
       <effect tech="ypFreeCoinCrate400" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofCoinLarge400" relativity="Absolute">
         <target type="Player">
         </target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.20" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="Yield" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
   </tech>
@@ -22778,6 +22769,12 @@
       <effect type="Data" action="Gather" amount="1.05" subtype="Yield" unittype="ypBerryBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.075" subtype="Yield" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="HCShipStrelets1" type="Normal">
@@ -24721,6 +24718,12 @@
       <effect type="Data" action="Gather" amount="1.05" subtype="Yield" unittype="ypBerryBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.075" subtype="Yield" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="HCShipFluyts1" type="Normal">
@@ -26435,6 +26438,9 @@
       <effect type="Data2" action="Gather" amount="1.20" subtype="WorkRateSpecific" resource="Food" unittype="ypRicePaddy" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.20" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="HCFurrierGerman" type="Normal">
@@ -26466,6 +26472,12 @@
       <effect tech="deGermanLogisticianDiscoveryShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="Uhlan" relativity="Absolute">
         <target type="Player">
         </target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.20" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="Yield" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
   </tech>
@@ -26503,6 +26515,12 @@
       <effect tech="deGermanLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="Uhlan" relativity="Absolute">
         <target type="Player">
         </target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.20" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="Yield" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
   </tech>
@@ -27111,6 +27129,9 @@
         <target type="ProtoUnit">SettlerWagon</target>
       </effect>
       <effect type="Data" action="Gather" amount="1.35" subtype="WorkRate" unittype="ypGroveBuilding" relativity="BasePercent">
+        <target type="ProtoUnit">SettlerWagon</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.35" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
         <target type="ProtoUnit">SettlerWagon</target>
       </effect>
     </effects>
@@ -35538,6 +35559,12 @@
       <effect type="Data" action="Gather" amount="1.10" subtype="Yield" unittype="ypBerryBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.25" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="Yield" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="HCXPAdoption" type="Normal">
@@ -36013,6 +36040,9 @@
       <effect type="Data2" action="Gather" amount="1.10" subtype="WorkRateSpecific" resource="Food" unittype="ypRicePaddy" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="HarvestCeremony" type="Normal">
@@ -36048,6 +36078,9 @@
       <effect type="Data2" action="Gather" amount="1.15" subtype="WorkRateSpecific" resource="Food" unittype="ypRicePaddy" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="GreenCornCeremony" type="Normal">
@@ -36081,6 +36114,9 @@
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
       <effect type="Data2" action="Gather" amount="1.20" subtype="WorkRateSpecific" resource="Food" unittype="ypRicePaddy" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.20" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
@@ -38138,6 +38174,9 @@
       <effect type="Data2" action="Gather" amount="1.10" subtype="WorkRateSpecific" resource="Food" unittype="ypRicePaddy" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="NatXPZapotecCloudPeople" type="Normal">
@@ -38548,6 +38587,9 @@
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
       <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="ypGroveBuilding" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
@@ -41716,6 +41758,9 @@
       <effect tech="deSpanishLogisticianShadow" type="Data" amount="1.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="CrateofCoin" relativity="Absolute">
         <target type="Player">
         </target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
   </tech>
@@ -46314,6 +46359,12 @@
         <target type="Player">
         </target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.20" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="Yield" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="YPHCSpiceTradeIndian" type="Normal">
@@ -46352,6 +46403,12 @@
       <effect tech="ypFreeIndianSepoy" type="Data" amount="2.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="ypSepoy" relativity="Absolute">
         <target type="Player">
         </target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.20" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="Yield" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
   </tech>
@@ -46433,6 +46490,9 @@
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
       <effect type="Data" action="Gather" amount="1.08" subtype="WorkRate" unittype="deFurTrade" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.08" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
@@ -46523,6 +46583,9 @@
     <flag>YPNativeImprovement</flag>
     <flag>CountsTowardEconomicScore</flag>
     <effects>
+      <effect type="Data" amount="0.60" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
       <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="ypBerryBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
@@ -46568,7 +46631,7 @@
       <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="AbstractFish" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
-      <effect type="Data" amount="0.60" subtype="Hitpoints" relativity="BasePercent">
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
@@ -46845,6 +46908,9 @@
     <flag>YPNativeImprovement</flag>
     <effects>
       <effect type="Data" action="Gather" amount="1.40" subtype="WorkRate" unittype="AbstractBerryBush" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.40" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
@@ -48365,10 +48431,10 @@
     <flag>HomeCity</flag>
     <effects>
       <effect type="TextOutput">69929</effect>
-      <effect type="Data" amount="1.15" subtype="Hitpoints" relativity="BasePercent">
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
         <target type="ProtoUnit">ypSteppeRider</target>
       </effect>
-      <effect type="Data" amount="1.15" subtype="Hitpoints" relativity="BasePercent">
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
         <target type="ProtoUnit">ypChuKoNu</target>
       </effect>
     </effects>
@@ -48538,7 +48604,7 @@
   <tech name="YPHCBannerReforms" type="Normal">
     <dbid>3955</dbid>
     <displaynameid>61562</displaynameid>
-    <cost resourcetype="Food">200.0000</cost>
+    <cost resourcetype="Food">500.0000</cost>
     <cost resourcetype="Ships">1.0000</cost>
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
@@ -48862,7 +48928,7 @@
     <flag>YPIgnorePopCostBuildLimitFreeHCUnitIfTechObtainable</flag>
     <effects>
       <effect type="TechStatus" status="active">ypNatDisciplinedShaolin</effect>
-      <effect tech="deCardIgnoreBuildLimit" type="Data" amount="24.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="ypNatMercRattanShield" relativity="Absolute">
+      <effect tech="deCardIgnoreBuildLimit" type="Data" amount="26.00" subtype="FreeHomeCityUnitIfTechObtainable" unittype="ypNatMercRattanShield" relativity="Absolute">
         <target type="Player">
         </target>
       </effect>
@@ -50371,12 +50437,15 @@
       <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="ypGroveBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="YPHCShipBeiyangArmy" type="Normal">
     <dbid>4158</dbid>
     <displaynameid>62319</displaynameid>
-    <cost resourcetype="Food">1000.0000</cost>
+    <cost resourcetype="Food">750.0000</cost>
     <cost resourcetype="Ships">1.0000</cost>
     <researchpoints>40.0000</researchpoints>
     <status>UNOBTAINABLE</status>
@@ -50421,6 +50490,12 @@
       </effect>
       <effect type="TextOutput">62343</effect>
       <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="ypBerryBuilding" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="Yield" unittype="deTorpBush2" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
@@ -53813,6 +53888,9 @@
         </target>
       </effect>
       <effect type="TechStatus" status="obtainable">ypConsulateRelationsFrench</effect>
+      <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="ypConsulateDutchArsenalWagon" type="Normal">
@@ -56207,6 +56285,9 @@
       <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="ypBerryBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="ypToshoguShrineDaimyoBonus" type="Normal">
@@ -56482,6 +56563,9 @@
       <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="ypBerryBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="ypMarketBerryTraps" type="Normal">
@@ -56503,6 +56587,9 @@
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
       <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="ypBerryBuilding" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
@@ -57102,6 +57189,9 @@
       <effect type="Data" action="Gather" amount="0.95" subtype="WorkRate" unittype="ypGroveBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="0.95" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="YPHCMeleeDamageIndians" type="Normal">
@@ -57390,7 +57480,7 @@
     <icon>resources\art\units\asians\chinese\keshik\keshik_icon_64.png</icon>
     <flag>HomeCity</flag>
     <effects>
-      <effect type="Data" amount="9.00" subtype="FreeHomeCityUnit" unittype="ypKeshik" relativity="Absolute">
+      <effect type="Data" amount="10.00" subtype="FreeHomeCityUnit" unittype="ypKeshik" relativity="Absolute">
         <target type="Player">
         </target>
       </effect>
@@ -57578,6 +57668,12 @@
       </effect>
       <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
         <target type="ProtoUnit">ypFlameThrower</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractGrenadier</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractGrenadier</target>
       </effect>
     </effects>
   </tech>
@@ -57856,6 +57952,9 @@
       <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="ypBerryBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.15" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="YPHCShipGroveWagonIndians1" type="Normal">
@@ -58115,6 +58214,9 @@
       <effect type="Data" action="Gather" amount="0.90" subtype="WorkRate" unittype="Huntable" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="0.90" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="ypBigSequesterRemoveClone1" type="Normal">
@@ -58162,6 +58264,9 @@
       <effect type="Data" amount="-2.50" subtype="ResourceTrickleRate" resource="Trade" relativity="Absolute">
         <target type="Player">
         </target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
   </tech>
@@ -61076,6 +61181,9 @@
       <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="ypGroveBuilding" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="ypMarketWheelbarrow" type="Normal">
@@ -61109,6 +61217,9 @@
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
       <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="ypGroveBuilding" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
     </effects>
@@ -61204,6 +61315,9 @@
         </target>
       </effect>
       <effect type="TechStatus" status="obtainable">ypConsulateRelationsSPCChina</effect>
+      <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="ypBigConsulateSPCJapan" type="Normal">
@@ -64553,6 +64667,9 @@
       </effect>
       <effect type="TechStatus" status="obtainable">ypConsulateRelationsFrench</effect>
       <effect type="TechStatus" status="active">ypBigTradeTaxEnable</effect>
+      <effect type="Data" action="Gather" amount="1.05" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="ypHCShipCoinCrates2" type="Normal">
@@ -64920,6 +65037,9 @@
       <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
         <target type="ProtoUnit">ypFlameThrower</target>
       </effect>
+      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractGrenadier</target>
+      </effect>
     </effects>
   </tech>
   <tech name="YPHCArtilleryHitpointsChinese" type="Normal">
@@ -64938,6 +65058,9 @@
       </effect>
       <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
         <target type="ProtoUnit">ypFlameThrower</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractGrenadier</target>
       </effect>
     </effects>
   </tech>
@@ -71667,6 +71790,10 @@
       <effect type="TechStatus" status="obtainable">IncendiaryGrenades</effect>
       <effect type="TechStatus" status="active">SaloonJaeger</effect>
       <effect type="TechStatus" status="active">SaloonBlackRider</effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">Crossbowman</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">VeteranCrossbowmen</effect>
     </effects>
   </tech>
   <tech name="DEColonializeSwedish" type="Normal">
@@ -73930,7 +74057,7 @@
       <effect type="Data" amount="1.10" subtype="MaximumVelocity" relativity="BasePercent">
         <target type="ProtoUnit">AbstractHandInfantry</target>
       </effect>
-      <effect type="Data" amount="1.15" subtype="TrainPoints" relativity="BasePercent">
+      <effect type="Data" amount="1.10" subtype="TrainPoints" relativity="BasePercent">
         <target type="ProtoUnit">AbstractHandInfantry</target>
       </effect>
     </effects>
@@ -73938,7 +74065,7 @@
   <tech name="DEChurchSavolaxJaegers" type="Normal">
     <dbid>6382</dbid>
     <displaynameid>91617</displaynameid>
-    <cost resourcetype="Gold">1000.0000</cost>
+    <cost resourcetype="Wood">1000.0000</cost>
     <researchpoints>15.0000</researchpoints>
     <status>UNOBTAINABLE</status>
     <icon>resources\images\icons\techs\sweden\savolax_jaegers.png</icon>
@@ -73954,13 +74081,43 @@
         <target type="Player">
         </target>
       </effect>
-      <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+      <effect type="Data" amount="1.05" subtype="Hitpoints" relativity="BasePercent">
         <target type="ProtoUnit">MercJaeger</target>
       </effect>
       <effect type="SetName" proto="MercJaeger" culture="none" newname="91618">
       </effect>
       <effect type="Data" amount="1.00" tactic="Stealth" subtype="TacticEnable" relativity="Absolute">
         <target type="ProtoUnit">MercJaeger</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="6">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="6">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="4">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="CommandAdd" proto="MercJaeger" page="0" column="4">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">MercJaeger</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Galleon</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Barracks</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Blockhouse</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
+        <target type="ProtoUnit">Saloon</target>
       </effect>
     </effects>
   </tech>
@@ -74586,9 +74743,6 @@
       </effect>
       <effect type="Data" amount="1.00" subtype="AddTrain" unittype="MercJaeger" relativity="Absolute">
         <target type="ProtoUnit">Saloon</target>
-      </effect>
-      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-        <target type="ProtoUnit">MercJaeger</target>
       </effect>
     </effects>
   </tech>
@@ -75972,6 +76126,9 @@
         <target type="ProtoUnit">TownCenter</target>
       </effect>
       <effect type="TechStatus" status="active">XPRevolution</effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DERevolutionBarbaryStates" type="Normal">
@@ -77885,10 +78042,10 @@
     <rollovertextid>91745</rollovertextid>
     <flag>HomeCity</flag>
     <effects>
-      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+      <effect type="Data" amount="1.25" subtype="Hitpoints" relativity="BasePercent">
         <target type="ProtoUnit">Mercenary</target>
       </effect>
-      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+      <effect type="Data" amount="1.25" subtype="Damage" allactions="1" relativity="BasePercent">
         <target type="ProtoUnit">Mercenary</target>
       </effect>
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
@@ -81916,6 +82073,9 @@
         <target type="Player">
         </target>
       </effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="deDefaultCratesShadow" type="Normal">
@@ -82219,6 +82379,9 @@
       <effect type="SetName" proto="Settler" culture="none" newname="80869">
       </effect>
       <effect type="TextOutput">91829</effect>
+      <effect type="Data" action="Gather" amount="1.10" subtype="WorkRate" unittype="deTorpBush2" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
     </effects>
   </tech>
   <tech name="DEHCREVSuezCanal" type="Normal">
@@ -82680,10 +82843,16 @@
       <techstatus status="Active">DEHCBlueberries</techstatus>
     </prereqs>
     <effects>
+      <effect type="Data" amount="200" subtype="InventoryAmount" resource="Food" relativity="Absolute">
+        <target type="ProtoUnit">deTorpBush</target>
+      </effect>
       <effect type="TransformUnit" toprotoid="deTorpBush2" fromprotoid="deTorpBush">
       </effect>
-      <effect type="Data" amount="375" subtype="InventoryAmount" resource="Food" relativity="Absolute">
-        <target type="ProtoUnit">deTorpBush2</target>
+      <effect type="Data" action="SpawnBush" amount="0.00" subtype="WorkRate" unittype="deTorpBush" relativity="Assign">
+        <target type="ProtoUnit">deTorp</target>
+      </effect>
+      <effect type="Data" action="SpawnBush" amount="1.00" subtype="WorkRate" unittype="deTorpBush2" relativity="Assign">
+        <target type="ProtoUnit">deTorp</target>
       </effect>
       <effect type="Data" action="AreaGatherBerryBush" amount="0.00" subtype="ActionEnable" relativity="Absolute">
         <target type="ProtoUnit">deTorp</target>
@@ -82718,6 +82887,22 @@
     <effects>
       <effect type="CommandRemove" tech="VeteranPikemen">
         <target type="ProtoUnit">Barracks</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="DEHCShipMineWagon3" type="Normal">
+    <dbid>6700</dbid>
+    <displaynameid>91862</displaynameid>
+    <cost resourcetype="Ships">1.0000</cost>
+    <researchpoints>40.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\art\buildings\copper_mine\copper_mine_icon.png</icon>
+    <rollovertextid>91861</rollovertextid>
+    <flag>HomeCity</flag>
+    <effects>
+      <effect type="Data" amount="4.00" subtype="FreeHomeCityUnit" unittype="deProspectorWagon" relativity="Absolute">
+        <target type="Player">
+        </target>
       </effect>
     </effects>
   </tech>
